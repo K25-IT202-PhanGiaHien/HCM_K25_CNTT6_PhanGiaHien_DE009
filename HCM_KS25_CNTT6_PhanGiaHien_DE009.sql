@@ -120,7 +120,7 @@ JOIN Flights f
 ON a.airline_id = f.airline_id;
 
 SELECT full_name, phone
-FROM Passenger p
+FROM Passengers p
 JOIN Bookings b
 ON p.passenger_id = b.passenger_id
 JOIN flights f
