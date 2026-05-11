@@ -115,11 +115,17 @@ ON b.flight_id = f.flight_id
 WHERE status = 'Booked';
 
 SELECT a.airline_name, f.route_name
-From Airlines a
+FROM Airlines a
 JOIN Flights f
 ON a.airline_id = f.airline_id;
 
-
+SELECT full_name, phone
+FROM Passenger p
+JOIN Bookings b
+ON p.passenger_id = b.passenger_id
+JOIN flights f
+ON f.flight_id = b.flight_id
+WHERE route_name = 'HN-HCM';
 
 
 
